@@ -32,14 +32,6 @@ function reverseText(text) {
 }
 console.log("3.Reverse text: ", reverseText("hello"));
 
-function anagrams(k1, k2) {
-  const test = k1.split("").sort().join("");
-  const test2 = k2.split("").sort().join("");
-  return test === test2;
-}
-
-console.log(anagrams("listen", "silent"));
-
 function gradingStudent(num) {
   const result = [];
 
@@ -68,4 +60,27 @@ function twoSum(nums, target) {
     }
   }
 }
-console.log(twoSum([2, 7, 11, 15], 9));
+console.log("4.Two Sum: ", twoSum([2, 7, 11, 15], 9));
+
+function fizzBuzz(n) {
+  var result = [];
+
+  for (var i = 1; i <= n; i++) {
+    var answer = "";
+
+    if (i % 3 === 0) {
+      answer = "Fizz";
+    } else if (i % 5 === 0) {
+      answer = "Buzz";
+    } else if (i % 3 === 0 && i % 5 === 0) {
+      answer = "FizzBuzz";
+    } else {
+      answer = i.toString();
+    }
+
+    result.push(answer);
+  }
+
+  return result;
+}
+console.log("5.FizzBuzz:", fizzBuzz(5));
